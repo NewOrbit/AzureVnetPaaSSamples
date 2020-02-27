@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using ConnectivityTester.Models;
 using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
 
