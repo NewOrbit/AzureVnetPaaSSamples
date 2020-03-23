@@ -21,10 +21,10 @@ namespace ConnectivityTester.Controllers
             this.logger = logger;
         }
 
-        public IActionResult SQl()
+        public IActionResult SQL()
         {
             
-            var connectionString = this.configuration["sql"];
+            var connectionString = this.GetSQLConnectionString();
             logger.LogInformation("SQL con : {0}", connectionString);
 
             try
@@ -45,6 +45,28 @@ namespace ConnectivityTester.Controllers
             }
         }
 
+        public IActionResult SQLIP()
+        {
+            
+            try
+            {
+                var connectionString = this.GetSQLConnectionString();
+                var builder = new SqlConnectionStringBuilder(connectionString);
+                var serverName = builder.DataSource;
+                var hostEntry = System.Net.Dns.GetHostEntry(serverName);
+                return this.Ok($"{hostEntry.HostName}: {String.Join(",", hostEntry.AddressList.Select(a => a.ToString()) )}");
+            }
+            catch (Exception e)
+            {
+                return this.StatusCode(500, e.Message);
+            }
+            
+        }
+
+        private string GetSQLConnectionString()
+        {
+            return this.configuration["sql"];
+        }
 
     }
 }
