@@ -60,7 +60,21 @@ namespace ConnectivityTester.Controllers
             {
                 return this.StatusCode(500, e.Message);
             }
-            
+        }
+
+        public IActionResult IPLookup()
+        {
+            try
+            {
+                var hostName = this.configuration["hostname"];
+                var hostEntry = System.Net.Dns.GetHostEntry(hostName);
+                return this.Ok($"{hostEntry.HostName}: {String.Join(",", hostEntry.AddressList.Select(a => a.ToString()) )}");
+            }
+            catch (Exception e)
+            {
+                return this.StatusCode(500, e.Message);
+            }
+
         }
 
         private string GetSQLConnectionString()
