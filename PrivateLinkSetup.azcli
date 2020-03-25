@@ -1,0 +1,102 @@
+$subid = "your subscription here" 
+$group = "fl-test-vpn"
+az configure --defaults group=$group --scope local
+az account set --subscription $subid
+
+## Only for test
+$sqlusername = "fltest"
+$sqlpassword = "Notverysecurebecausethisisjustatest9876!"
+
+
+# Stuff to test on - test only
+az group create --location northeurope --name $group
+
+az appservice plan create --location northeurope --name fl-test-vpn-eun --sku S1
+az appservice plan create --location francecentral --name fl-test-vpn-frc --sku S1
+
+az webapp create --name fl-test-vpn-eun --plan fl-test-vpn-eun
+az webapp create --name fl-test-vpn-frc --plan fl-test-vpn-frc
+# TODO: Set core etc and potentially auto-deploy from the connection tester repo
+
+az sql server create --name fl-test-vnet-server-eun  --location northeurope --admin-user $sqlusername --admin-password $sqlpassword
+az sql server create --name fl-test-vnet-server-frc  --location francecentral --admin-user $sqlusername --admin-password $sqlpassword
+az sql db create --name fl-test-vnet-db --server fl-test-vnet-server-eun --edition Standard --capacity 10
+az sql failover-group create --name fl-test --partner-server fl-test-vnet-server-frc --server fl-test-vnet-server-eun --add-db fl-test-vnet-db --failover-policy Automatic
+
+az storage account create --name fltestvneteun --location northeurope --access-tier cool --default-action Allow --https-only true --kind BlobStorage --sku Standard_RAGRS
+az storage container create --name privatetest --account-name fltestvneteun --public-access off
+az storage account update --name fltestvneteun --default-action Deny
+
+
+# Set up network
+az network vnet create --name fl-test-vpn-eun --location northeurope --address-prefixes 10.0.0.0/16  
+az network vnet subnet create --name fl-test-vpn-main-eun --vnet-name fl-test-vpn-eun --address-prefixes 10.0.1.0/24 
+az network vnet subnet create --name fl-test-vpn-web-eun --vnet-name fl-test-vpn-eun --address-prefixes 10.0.2.0/24 
+
+az network vnet create --name fl-test-vpn-frc --location francecentral --address-prefixes 10.1.0.0/16  
+az network vnet subnet create --name fl-test-vpn-main-frc --vnet-name fl-test-vpn-frc --address-prefixes 10.1.1.0/24 
+az network vnet subnet create --name fl-test-vpn-web-frc --vnet-name fl-test-vpn-frc --address-prefixes 10.1.2.0/24 
+
+az network vnet peering create --name eun-to-frc --vnet-name fl-test-vpn-eun --remote-vnet fl-test-vpn-frc --allow-vnet-access --allow-forwarded-traffic 
+az network vnet peering create --name frc-to-eun --vnet-name fl-test-vpn-frc --remote-vnet fl-test-vpn-eun --allow-vnet-access --allow-forwarded-traffic 
+
+# Link Web app...
+az webapp vnet-integration add --name fl-test-vpn-eun --vnet fl-test-vpn-eun --subnet fl-test-vpn-web-eun
+az webapp vnet-integration add --name fl-test-vpn-frc --vnet fl-test-vpn-frc --subnet fl-test-vpn-web-frc
+
+# Set up Gateway (if needed)
+
+
+# Set up Private Link 
+az network vnet subnet update --name fl-test-vpn-main-eun --vnet-name fl-test-vpn-eun --disable-private-endpoint-network-policies true
+az network vnet subnet update --name fl-test-vpn-main-frc --vnet-name fl-test-vpn-frc --disable-private-endpoint-network-policies true
+
+$northsqlid = az sql server show --name fl-test-vnet-server-eun --query id -o tsv
+az network private-endpoint create --connection-name fl-test-vnet-sql-eun `
+                                    --name fl-test-vnet-sql-eun `
+                                    --private-connection-resource-id $northsqlid `
+                                    --group-ids sqlServer `
+                                    --vnet-name fl-test-vpn-eun `
+                                    --subnet fl-test-vpn-main-eun `
+                                    --location northeurope
+
+$westsqlid = az sql server show --name fl-test-vnet-server-frc --query id -o tsv
+az network private-endpoint create --connection-name fl-test-vnet-sql-frc `
+                                    --name fl-test-vnet-sql-frc `
+                                    --private-connection-resource-id $westsqlid `
+                                    --group-ids sqlServer `
+                                    --vnet-name fl-test-vpn-frc `
+                                    --subnet fl-test-vpn-main-frc `
+                                    --location francecentral
+
+$storageAccountId = az storage account show --name fltestvneteun --query id -o tsv
+az network private-endpoint create --connection-name fl-test-vnet-storage-eun `
+                                    --name fl-test-vnet-storage-eun `
+                                    --private-connection-resource-id $storageAccountId `
+                                    --group-ids blob ` # I haven't tested this
+                                    --vnet-name fl-test-vpn-eun `
+                                    --subnet fl-test-vpn-main-eun `
+                                    --location northeurope
+# !!! When creating in the portal, it also creates a private DNS zone. Investigate...
+# It has created a link to the EUN network only. I wonder if this is what we need to do? Create private DNS zones and link them to both networks?
+
+# Consider creating local storage accounts too
+
+
+
+
+# Configuration
+
+$connectionString = "Server=tcp:fl-test-vnet-server-frc.database.windows.net,1433;Initial Catalog=fl-test-vnet-db;Persist Security Info=False;User ID=$($sqlusername);Password=$($sqlpassword);MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+$hostname = "fltestvneteun.blob.core.windows.net"
+
+az webapp config appsettings set --name fl-test-vpn-eun --settings `
+  sql=$connectionString `
+  hostname=$hostname
+
+  az webapp config appsettings set --name fl-test-vpn-frc --settings `
+  sql=$connectionString `
+  hostname=$hostname
+
+az webapp restart --name fl-test-vpn-eun
+az webapp restart --name fl-test-vpn-frc

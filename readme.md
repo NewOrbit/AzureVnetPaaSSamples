@@ -11,3 +11,6 @@ At the moment it can:
 # Usage
 The homepage shows a list of tests and which configuration option you need to set to test it.  
 You'll need to restart the website between config change. This is a pain, but allowing you to just enter connection strings etc into an input box was too much for security mentality to cope with.
+
+# Test environment
+See the PrivateLinkSetup.azcli script if you want to set up a test environment with some interesting challenges. I have not been able to make that work at all yet.
