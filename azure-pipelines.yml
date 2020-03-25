@@ -19,5 +19,15 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
-    publishWebProjects: true
+    publishWebProjects: false
+    projects: | 
+        InventoryFunctions/NewOrbit.Infrastructure.InventoryFunctions.csproj
+        InventoryManager/NewOrbit.Infrastructure.InventoryManager.csproj
+    arguments: '--no-restore --configuration Release --output $(Build.ArtifactStagingDirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
 
