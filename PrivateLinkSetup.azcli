@@ -1,4 +1,4 @@
-$subid = "your subscription here" 
+$subid = "Playground" 
 $group = "fl-test-vpn"
 az configure --defaults group=$group --scope local
 az account set --subscription $subid

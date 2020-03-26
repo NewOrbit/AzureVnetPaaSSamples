@@ -47,18 +47,18 @@ namespace ConnectivityTester.Controllers
 
         public IActionResult SQLIP()
         {
-            
+            string serverName = "[not found yet]";
             try
             {
                 var connectionString = this.GetSQLConnectionString();
                 var builder = new SqlConnectionStringBuilder(connectionString);
-                var serverName = builder.DataSource;
+                serverName = builder.DataSource;
                 var hostEntry = System.Net.Dns.GetHostEntry(serverName);
-                return this.Ok($"{hostEntry.HostName}: {String.Join(",", hostEntry.AddressList.Select(a => a.ToString()) )}");
+                return this.Ok($"{serverName} : {hostEntry.HostName} : {String.Join(",", hostEntry.AddressList.Select(a => a.ToString()) )}");
             }
             catch (Exception e)
             {
-                return this.StatusCode(500, e.Message);
+                return this.StatusCode(500, $"ServerName: {serverName} Error: {e.Message}");
             }
         }
 
@@ -68,7 +68,7 @@ namespace ConnectivityTester.Controllers
             {
                 var hostName = this.configuration["hostname"];
                 var hostEntry = System.Net.Dns.GetHostEntry(hostName);
-                return this.Ok($"{hostEntry.HostName}: {String.Join(",", hostEntry.AddressList.Select(a => a.ToString()) )}");
+                return this.Ok($"{hostName} : {hostEntry.HostName} : {String.Join(",", hostEntry.AddressList.Select(a => a.ToString()) )}");
             }
             catch (Exception e)
             {
