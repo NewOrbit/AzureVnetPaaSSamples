@@ -14,3 +14,9 @@ You'll need to restart the website between config change. This is a pain, but al
 
 # Test environment
 See the PrivateLinkSetup.azcli script if you want to set up a test environment with some interesting challenges. I have not been able to make that work at all yet.
+
+# TODO
+Look at the following:
+- https://feedback.azure.com/forums/169385-web-apps/suggestions/38383642-web-app-and-private-dns-zone-support
+Test the notions in the [linked article]() about how `WEBSITE_VNET_ROUTE_ALL` does not work on Windows (?) and how you can *only have one connection per app service plan*. 
+If Windows needs a DNS Forwarder then look at https://github.com/Azure/azure-quickstart-templates/tree/master/301-dns-forwarder
