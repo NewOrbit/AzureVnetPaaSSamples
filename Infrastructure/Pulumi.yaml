@@ -1,0 +1,3 @@
+name: VNetTests
+runtime: nodejs
+description: Testing vnets

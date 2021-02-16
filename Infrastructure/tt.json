@@ -1,0 +1,1272 @@
+{
+    "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2021-02-11T13:28:17.8208277Z",
+            "magic": "3b261ba4602b9c2261164c3898be1efda8b44bb816d0a3ea26d93c8dc92ebc76",
+            "version": "v2.20.0"
+        },
+        "secrets_providers": {
+            "type": "passphrase",
+            "state": {
+                "salt": "v1:qSYXCooKI30=:v1:ZKG/HMLdnt6eOfZx:8RsV3hlvDSym9nKfUJPsmrpUMDUzZA=="
+            }
+        },
+        "resources": [
+            {
+                "urn": "urn:pulumi:dev::VNetTests::pulumi:pulumi:Stack::VNetTests-dev",
+                "custom": false,
+                "type": "pulumi:pulumi:Stack"
+            },
+            {
+                "urn": "urn:pulumi:dev::VNetTests::pulumi:providers:azure-nextgen::default_0_6_0",
+                "custom": true,
+                "id": "9da71cfa-aee5-4622-8abb-b0f0c010b297",
+                "type": "pulumi:providers:azure-nextgen",
+                "inputs": {
+                    "version": "0.6.0"
+                },
+                "outputs": {
+                    "version": "0.6.0"
+                }
+            },
+            {
+                "urn": "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest",
+                "custom": true,
+                "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest",
+                "type": "azure-nextgen:resources/latest:ResourceGroup",
+                "inputs": {
+                    "location": "northeurope",
+                    "resourceGroupName": "fl-vnettest",
+                    "tags": {
+                        "Owner": "flytzen"
+                    }
+                },
+                "outputs": {
+                    "__inputs": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "v1:l5OEj16AXo6SlYGL:J3tIixRdKMm+YqcL1F4XdYvwjlB7TrgJ4gcy4xbR8AxA1NbinGV7lhadcw13+hQJhTiO2dtmhpW+uzG9IB6vI0keL+9XozcVHf9TOVyjmg4GSPiw9gENaidZ5uNU/5RAoIR9+FTL2A=="
+                    },
+                    "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest",
+                    "location": "northeurope",
+                    "name": "fl-vnettest",
+                    "properties": {
+                        "provisioningState": "Succeeded"
+                    },
+                    "tags": {
+                        "Owner": "flytzen"
+                    },
+                    "type": "Microsoft.Resources/resourceGroups"
+                },
+                "parent": "urn:pulumi:dev::VNetTests::pulumi:pulumi:Stack::VNetTests-dev",
+                "provider": "urn:pulumi:dev::VNetTests::pulumi:providers:azure-nextgen::default_0_6_0::9da71cfa-aee5-4622-8abb-b0f0c010b297",
+                "propertyDependencies": {
+                    "location": null,
+                    "resourceGroupName": null,
+                    "tags": null
+                },
+                "aliases": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/v20151101:ResourceGroup::fl-vnettest",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/v20160201:ResourceGroup::fl-vnettest",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/v20160701:ResourceGroup::fl-vnettest",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/v20160901:ResourceGroup::fl-vnettest",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/v20170510:ResourceGroup::fl-vnettest",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/v20180201:ResourceGroup::fl-vnettest",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/v20180501:ResourceGroup::fl-vnettest",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/v20190301:ResourceGroup::fl-vnettest",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/v20190501:ResourceGroup::fl-vnettest",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/v20190510:ResourceGroup::fl-vnettest",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/v20190701:ResourceGroup::fl-vnettest",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/v20190801:ResourceGroup::fl-vnettest",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/v20191001:ResourceGroup::fl-vnettest",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/v20200601:ResourceGroup::fl-vnettest",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/v20200801:ResourceGroup::fl-vnettest",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/v20201001:ResourceGroup::fl-vnettest"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:RouteTable::managed-sql-rt",
+                "custom": true,
+                "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/routeTables/managed-sql-rt",
+                "type": "azure-nextgen:network/latest:RouteTable",
+                "inputs": {
+                    "location": "northeurope",
+                    "resourceGroupName": "fl-vnettest",
+                    "routeTableName": "managed-sql-rt"
+                },
+                "outputs": {
+                    "__inputs": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "v1:6c3cy9MZWyLFFAlk:8DQRh6ll+pH1ueYSpFRoG/jqO11Z8gmr2oyrUeuwnKi/tSHd8fdH9sRJUVpS7ZwC9FHZnfrRx5jilgE4BfSHEBtA16JqS9FgZ6n5TiikCa8ld2fpKLurqkOUk+1FBY1f/7EzitZ3xjexMEXf77Q="
+                    },
+                    "disableBgpRoutePropagation": false,
+                    "etag": "W/\"98cb1fbf-c979-4453-8585-4985a121dc28\"",
+                    "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/routeTables/managed-sql-rt",
+                    "location": "northeurope",
+                    "name": "managed-sql-rt",
+                    "provisioningState": "Succeeded",
+                    "resourceGuid": "bad57ca3-2324-4fe8-a32a-6c56442f39f4",
+                    "routes": [],
+                    "type": "Microsoft.Network/routeTables"
+                },
+                "parent": "urn:pulumi:dev::VNetTests::pulumi:pulumi:Stack::VNetTests-dev",
+                "dependencies": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                ],
+                "provider": "urn:pulumi:dev::VNetTests::pulumi:providers:azure-nextgen::default_0_6_0::9da71cfa-aee5-4622-8abb-b0f0c010b297",
+                "propertyDependencies": {
+                    "location": null,
+                    "resourceGroupName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                    ],
+                    "routeTableName": null
+                },
+                "aliases": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150501preview:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150615:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160330:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160601:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160901:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20161201:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170301:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170601:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170801:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170901:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171001:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171101:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180101:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180201:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180401:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180601:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180701:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180801:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181001:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181101:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181201:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190201:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190401:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190601:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190701:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190801:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190901:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191101:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191201:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200301:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200401:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200501:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200601:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200701:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200801:RouteTable::managed-sql-rt"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:VirtualNetwork::fl-vnettest-vn",
+                "custom": true,
+                "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/virtualNetworks/fl-vnettest-vn",
+                "type": "azure-nextgen:network/latest:VirtualNetwork",
+                "inputs": {
+                    "addressSpace": {
+                        "addressPrefixes": [
+                            "10.0.0.0/16"
+                        ]
+                    },
+                    "enableDdosProtection": false,
+                    "enableVmProtection": false,
+                    "location": "northeurope",
+                    "resourceGroupName": "fl-vnettest",
+                    "tags": {
+                        "Environment": "Experiment",
+                        "Scale": "Normal"
+                    },
+                    "virtualNetworkName": "fl-vnettest-vn"
+                },
+                "outputs": {
+                    "__inputs": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "v1:cm3GiT4rmm8wqojk:qsdjxgHXHmX3g6EE/lR/kytcTxe3Nblo5xORF6Xr4bKS1LT6Yi4NR6THVMskPo6p+tDOxbPY0iNFpomjHbOFaZxikxaBmWCX46X1zBUQTQi9MV6CxnVxbtLLSrjLwmnbVqcn0nc6jbU2kmI63Tkd3Pcs/LHFLHWw/ZUdwJ4xCC1cRBNJPFsVQ/AdAvWvqqUDPveJxoalDteR12TlWXgKt39w7zJgiStC+LjQ/wgylNhfigDQb+290DaGBoBIzBvoJbWqkai93DgdecTt/e12jLiw4MqF9Xuul2WA8EJz1lDqs1UYnzMHeieshgBAnE6UmRELnLhNES8CwqNy53d6l3CLcqGYfYzmhK5i9IX8jRi/mQ=="
+                    },
+                    "addressSpace": {
+                        "addressPrefixes": [
+                            "10.0.0.0/16"
+                        ]
+                    },
+                    "enableDdosProtection": false,
+                    "enableVmProtection": false,
+                    "etag": "W/\"97390cd7-7de4-4eaf-aee5-6e00e4eced6f\"",
+                    "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/virtualNetworks/fl-vnettest-vn",
+                    "location": "northeurope",
+                    "name": "fl-vnettest-vn",
+                    "provisioningState": "Succeeded",
+                    "resourceGuid": "fd56173a-f5dd-46d2-8abf-cb97de1d4426",
+                    "subnets": [],
+                    "tags": {
+                        "Environment": "Experiment",
+                        "Scale": "Normal"
+                    },
+                    "type": "Microsoft.Network/virtualNetworks",
+                    "virtualNetworkPeerings": []
+                },
+                "parent": "urn:pulumi:dev::VNetTests::pulumi:pulumi:Stack::VNetTests-dev",
+                "dependencies": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                ],
+                "provider": "urn:pulumi:dev::VNetTests::pulumi:providers:azure-nextgen::default_0_6_0::9da71cfa-aee5-4622-8abb-b0f0c010b297",
+                "propertyDependencies": {
+                    "addressSpace": null,
+                    "enableDdosProtection": null,
+                    "enableVmProtection": null,
+                    "location": null,
+                    "resourceGroupName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                    ],
+                    "tags": null,
+                    "virtualNetworkName": null
+                },
+                "aliases": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150501preview:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150615:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160330:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160601:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160901:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20161201:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170301:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170601:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170801:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170901:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171001:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171101:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180101:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180201:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180401:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180601:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180701:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180801:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181001:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181101:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181201:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190201:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190401:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190601:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190701:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190801:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190901:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191101:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191201:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200301:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200401:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200501:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200601:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200701:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200801:VirtualNetwork::fl-vnettest-vn"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:NetworkSecurityGroup::managed-sql-nsg",
+                "custom": true,
+                "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/networkSecurityGroups/managed-sql-nsg",
+                "type": "azure-nextgen:network/latest:NetworkSecurityGroup",
+                "inputs": {
+                    "location": "northeurope",
+                    "networkSecurityGroupName": "managed-sql-nsg",
+                    "resourceGroupName": "fl-vnettest"
+                },
+                "outputs": {
+                    "__inputs": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "v1:F35hNQjYOlDIncER:yybGQ7Ad1e4SdLwnaFUhrirO4oUyH8TQZrYSv+v50jnD6EwxyMk80pXfLBAdaPQEKZ0Sx/NlPSNttoh486MAWnxH5nEeVAI/C9WYF46pkvgOfExZpucG6G7AqjjM5DJZ8Bv1IdZlSPdC/Xfh8o07O2lKIc+oKPWHhw=="
+                    },
+                    "defaultSecurityRules": [
+                        {
+                            "access": "Allow",
+                            "description": "Allow inbound traffic from all VMs in VNET",
+                            "destinationAddressPrefix": "VirtualNetwork",
+                            "destinationAddressPrefixes": [],
+                            "destinationPortRange": "*",
+                            "destinationPortRanges": [],
+                            "direction": "Inbound",
+                            "etag": "W/\"b7c1d3f1-390a-45da-b4ba-bca4266311b1\"",
+                            "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/networkSecurityGroups/managed-sql-nsg/defaultSecurityRules/AllowVnetInBound",
+                            "name": "AllowVnetInBound",
+                            "priority": 65000,
+                            "protocol": "*",
+                            "provisioningState": "Succeeded",
+                            "sourceAddressPrefix": "VirtualNetwork",
+                            "sourceAddressPrefixes": [],
+                            "sourcePortRange": "*",
+                            "sourcePortRanges": [],
+                            "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+                        },
+                        {
+                            "access": "Allow",
+                            "description": "Allow inbound traffic from azure load balancer",
+                            "destinationAddressPrefix": "*",
+                            "destinationAddressPrefixes": [],
+                            "destinationPortRange": "*",
+                            "destinationPortRanges": [],
+                            "direction": "Inbound",
+                            "etag": "W/\"b7c1d3f1-390a-45da-b4ba-bca4266311b1\"",
+                            "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/networkSecurityGroups/managed-sql-nsg/defaultSecurityRules/AllowAzureLoadBalancerInBound",
+                            "name": "AllowAzureLoadBalancerInBound",
+                            "priority": 65001,
+                            "protocol": "*",
+                            "provisioningState": "Succeeded",
+                            "sourceAddressPrefix": "AzureLoadBalancer",
+                            "sourceAddressPrefixes": [],
+                            "sourcePortRange": "*",
+                            "sourcePortRanges": [],
+                            "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+                        },
+                        {
+                            "access": "Deny",
+                            "description": "Deny all inbound traffic",
+                            "destinationAddressPrefix": "*",
+                            "destinationAddressPrefixes": [],
+                            "destinationPortRange": "*",
+                            "destinationPortRanges": [],
+                            "direction": "Inbound",
+                            "etag": "W/\"b7c1d3f1-390a-45da-b4ba-bca4266311b1\"",
+                            "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/networkSecurityGroups/managed-sql-nsg/defaultSecurityRules/DenyAllInBound",
+                            "name": "DenyAllInBound",
+                            "priority": 65500,
+                            "protocol": "*",
+                            "provisioningState": "Succeeded",
+                            "sourceAddressPrefix": "*",
+                            "sourceAddressPrefixes": [],
+                            "sourcePortRange": "*",
+                            "sourcePortRanges": [],
+                            "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+                        },
+                        {
+                            "access": "Allow",
+                            "description": "Allow outbound traffic from all VMs to all VMs in VNET",
+                            "destinationAddressPrefix": "VirtualNetwork",
+                            "destinationAddressPrefixes": [],
+                            "destinationPortRange": "*",
+                            "destinationPortRanges": [],
+                            "direction": "Outbound",
+                            "etag": "W/\"b7c1d3f1-390a-45da-b4ba-bca4266311b1\"",
+                            "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/networkSecurityGroups/managed-sql-nsg/defaultSecurityRules/AllowVnetOutBound",
+                            "name": "AllowVnetOutBound",
+                            "priority": 65000,
+                            "protocol": "*",
+                            "provisioningState": "Succeeded",
+                            "sourceAddressPrefix": "VirtualNetwork",
+                            "sourceAddressPrefixes": [],
+                            "sourcePortRange": "*",
+                            "sourcePortRanges": [],
+                            "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+                        },
+                        {
+                            "access": "Allow",
+                            "description": "Allow outbound traffic from all VMs to Internet",
+                            "destinationAddressPrefix": "Internet",
+                            "destinationAddressPrefixes": [],
+                            "destinationPortRange": "*",
+                            "destinationPortRanges": [],
+                            "direction": "Outbound",
+                            "etag": "W/\"b7c1d3f1-390a-45da-b4ba-bca4266311b1\"",
+                            "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/networkSecurityGroups/managed-sql-nsg/defaultSecurityRules/AllowInternetOutBound",
+                            "name": "AllowInternetOutBound",
+                            "priority": 65001,
+                            "protocol": "*",
+                            "provisioningState": "Succeeded",
+                            "sourceAddressPrefix": "*",
+                            "sourceAddressPrefixes": [],
+                            "sourcePortRange": "*",
+                            "sourcePortRanges": [],
+                            "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+                        },
+                        {
+                            "access": "Deny",
+                            "description": "Deny all outbound traffic",
+                            "destinationAddressPrefix": "*",
+                            "destinationAddressPrefixes": [],
+                            "destinationPortRange": "*",
+                            "destinationPortRanges": [],
+                            "direction": "Outbound",
+                            "etag": "W/\"b7c1d3f1-390a-45da-b4ba-bca4266311b1\"",
+                            "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/networkSecurityGroups/managed-sql-nsg/defaultSecurityRules/DenyAllOutBound",
+                            "name": "DenyAllOutBound",
+                            "priority": 65500,
+                            "protocol": "*",
+                            "provisioningState": "Succeeded",
+                            "sourceAddressPrefix": "*",
+                            "sourceAddressPrefixes": [],
+                            "sourcePortRange": "*",
+                            "sourcePortRanges": [],
+                            "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+                        }
+                    ],
+                    "etag": "W/\"b7c1d3f1-390a-45da-b4ba-bca4266311b1\"",
+                    "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/networkSecurityGroups/managed-sql-nsg",
+                    "location": "northeurope",
+                    "name": "managed-sql-nsg",
+                    "provisioningState": "Succeeded",
+                    "resourceGuid": "0509a0a0-3fd9-4169-9473-ebd69c765fcb",
+                    "securityRules": [],
+                    "type": "Microsoft.Network/networkSecurityGroups"
+                },
+                "parent": "urn:pulumi:dev::VNetTests::pulumi:pulumi:Stack::VNetTests-dev",
+                "dependencies": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                ],
+                "provider": "urn:pulumi:dev::VNetTests::pulumi:providers:azure-nextgen::default_0_6_0::9da71cfa-aee5-4622-8abb-b0f0c010b297",
+                "propertyDependencies": {
+                    "location": null,
+                    "networkSecurityGroupName": null,
+                    "resourceGroupName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                    ]
+                },
+                "aliases": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150501preview:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150615:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160330:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160601:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160901:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20161201:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170301:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170601:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170801:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170901:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171001:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171101:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180101:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180201:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180401:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180601:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180701:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180801:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181001:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181101:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181201:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190201:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190401:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190601:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190701:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190801:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190901:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191101:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191201:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200301:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200401:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200501:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200601:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200701:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200801:NetworkSecurityGroup::managed-sql-nsg"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::VNetTests::azure-nextgen:sql/v20200801preview:Server::fl-vnettest-ss",
+                "custom": true,
+                "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Sql/servers/fl-vnettest-ss",
+                "type": "azure-nextgen:sql/v20200801preview:Server",
+                "inputs": {
+                    "administratorLogin": "fltest",
+                    "administratorLoginPassword": "kP7kJ96OQEdb2wvs7aPQTgtXXyGF6xhyViCJNDW",
+                    "location": "northeurope",
+                    "minimalTlsVersion": "1.2",
+                    "resourceGroupName": "fl-vnettest",
+                    "serverName": "fl-vnettest-ss",
+                    "tags": {
+                        "Environment": "Experiment",
+                        "Scale": "Normal"
+                    }
+                },
+                "outputs": {
+                    "__inputs": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "v1:wMD/15dDBSKofXG1:V2jsKK2gMcv50UfAvf0VKOKOFI2QnG304UGHbuHmpLi7+Sb4FQ1AokksKwQaXIXrT/ztzHOPr0ClNWUkDimpix0/3nSaWADU/0kEwd9E7W8Hjx8zpKniG+adnBbFn+ZI0D7sd2mYPRrR2EOJhufqMSj7vV3V3XZm1tli//hLER0l2SsTPRVMmPQ8tDqEEGpq6f+JFeK1ywHuFpTobo9R0BBHq80h4DoOhR3ZumeCNUaYBLxE0R2FeFsb4w8JJzqfdTLx9AOJ9pWVUU73ojUHergivdxN6b8tSyo3cvd4OA8qipGggP2U6kXeFMpuFq8IMZ4qLrbD62c2lNXZxkV5GqfRPriwHzWPS2PkiCDhdWNI2f3E/IbojaT0iXEP4w=="
+                    },
+                    "administratorLogin": "fltest",
+                    "fullyQualifiedDomainName": "fl-vnettest-ss.database.windows.net",
+                    "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Sql/servers/fl-vnettest-ss",
+                    "kind": "v12.0",
+                    "location": "northeurope",
+                    "minimalTlsVersion": "1.2",
+                    "name": "fl-vnettest-ss",
+                    "privateEndpointConnections": [],
+                    "publicNetworkAccess": "Enabled",
+                    "state": "Ready",
+                    "tags": {
+                        "Environment": "Experiment",
+                        "Scale": "Normal"
+                    },
+                    "type": "Microsoft.Sql/servers",
+                    "version": "12.0"
+                },
+                "parent": "urn:pulumi:dev::VNetTests::pulumi:pulumi:Stack::VNetTests-dev",
+                "dependencies": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                ],
+                "provider": "urn:pulumi:dev::VNetTests::pulumi:providers:azure-nextgen::default_0_6_0::9da71cfa-aee5-4622-8abb-b0f0c010b297",
+                "propertyDependencies": {
+                    "administratorLogin": null,
+                    "administratorLoginPassword": null,
+                    "location": null,
+                    "minimalTlsVersion": null,
+                    "resourceGroupName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                    ],
+                    "serverName": null,
+                    "tags": null
+                },
+                "aliases": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:sql/latest:Server::fl-vnettest-ss",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:sql/v20140401:Server::fl-vnettest-ss",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:sql/v20150501preview:Server::fl-vnettest-ss",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:sql/v20190601preview:Server::fl-vnettest-ss",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:sql/v20200202preview:Server::fl-vnettest-ss"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:Subnet::storage",
+                "custom": true,
+                "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/virtualNetworks/fl-vnettest-vn/subnets/storage",
+                "type": "azure-nextgen:network/latest:Subnet",
+                "inputs": {
+                    "addressPrefix": "10.0.7.0/24",
+                    "resourceGroupName": "fl-vnettest",
+                    "subnetName": "storage",
+                    "virtualNetworkName": "fl-vnettest-vn"
+                },
+                "outputs": {
+                    "__inputs": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "v1:mxHy1Hc1HG/dzdGz:0NDxIZIxqn3620JBDYRrejEl1mgBZ5iosze/94+nIwXIs+r1TkDzXCFvVACWhn3Eyw3TpdG7l+S2ylJpaM+4ct7vyXJRRHdl1Q3NZJy6Fgxuk/FCipbQHELGXUTR2c3JllFM0EhKUZ6wtz/c/Nc7zstn9P2SUjS+dZyQ+yXajLtXFcbn5+YYCro/NSiFrA=="
+                    },
+                    "addressPrefix": "10.0.7.0/24",
+                    "delegations": [],
+                    "etag": "W/\"9ed4674e-a52a-4bd8-9b02-179075234386\"",
+                    "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/virtualNetworks/fl-vnettest-vn/subnets/storage",
+                    "name": "storage",
+                    "privateEndpointNetworkPolicies": "Enabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled",
+                    "provisioningState": "Succeeded"
+                },
+                "parent": "urn:pulumi:dev::VNetTests::pulumi:pulumi:Stack::VNetTests-dev",
+                "dependencies": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                ],
+                "provider": "urn:pulumi:dev::VNetTests::pulumi:providers:azure-nextgen::default_0_6_0::9da71cfa-aee5-4622-8abb-b0f0c010b297",
+                "propertyDependencies": {
+                    "addressPrefix": null,
+                    "resourceGroupName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                    ],
+                    "subnetName": null,
+                    "virtualNetworkName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:VirtualNetwork::fl-vnettest-vn"
+                    ]
+                },
+                "aliases": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150501preview:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150615:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160330:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160601:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160901:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20161201:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170301:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170601:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170801:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170901:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171001:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171101:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180101:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180201:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180401:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180601:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180701:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180801:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181001:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181101:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181201:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190201:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190401:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190601:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190701:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190801:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190901:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191101:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191201:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200301:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200401:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200501:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200601:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200701:Subnet::storage",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200801:Subnet::storage"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:Subnet::backend-vms",
+                "custom": true,
+                "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/virtualNetworks/fl-vnettest-vn/subnets/backend-vms",
+                "type": "azure-nextgen:network/latest:Subnet",
+                "inputs": {
+                    "addressPrefix": "10.0.2.0/24",
+                    "resourceGroupName": "fl-vnettest",
+                    "subnetName": "backend-vms",
+                    "virtualNetworkName": "fl-vnettest-vn"
+                },
+                "outputs": {
+                    "__inputs": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "v1:cV7tht/KUqF5mf8z:Y1R0bBH6QraPdZt0+0RNwa8XvFWhR4HTTBuVLTle2Y7w80S0p+4cuFxKpxxjVawLZTObtQ4qQbYyzIphu2/Vhg6eMDfAjbM0JNgcMgRIKEgmZoeJQ1TaI4Ss/8sMCAZggYx9Lki2fWHFkzOf/Gp1s3O9MhC3VvtAD2devRYTr8LxG56uzrMu9hkuHrKJRvTYC/Y="
+                    },
+                    "addressPrefix": "10.0.2.0/24",
+                    "delegations": [],
+                    "etag": "W/\"9ed4674e-a52a-4bd8-9b02-179075234386\"",
+                    "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/virtualNetworks/fl-vnettest-vn/subnets/backend-vms",
+                    "name": "backend-vms",
+                    "privateEndpointNetworkPolicies": "Enabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled",
+                    "provisioningState": "Succeeded"
+                },
+                "parent": "urn:pulumi:dev::VNetTests::pulumi:pulumi:Stack::VNetTests-dev",
+                "dependencies": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                ],
+                "provider": "urn:pulumi:dev::VNetTests::pulumi:providers:azure-nextgen::default_0_6_0::9da71cfa-aee5-4622-8abb-b0f0c010b297",
+                "propertyDependencies": {
+                    "addressPrefix": null,
+                    "resourceGroupName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                    ],
+                    "subnetName": null,
+                    "virtualNetworkName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:VirtualNetwork::fl-vnettest-vn"
+                    ]
+                },
+                "aliases": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150501preview:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150615:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160330:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160601:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160901:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20161201:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170301:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170601:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170801:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170901:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171001:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171101:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180101:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180201:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180401:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180601:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180701:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180801:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181001:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181101:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181201:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190201:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190401:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190601:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190701:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190801:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190901:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191101:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191201:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200301:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200401:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200501:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200601:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200701:Subnet::backend-vms",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200801:Subnet::backend-vms"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:Subnet::cosmos",
+                "custom": true,
+                "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/virtualNetworks/fl-vnettest-vn/subnets/cosmos",
+                "type": "azure-nextgen:network/latest:Subnet",
+                "inputs": {
+                    "addressPrefix": "10.0.6.0/24",
+                    "resourceGroupName": "fl-vnettest",
+                    "subnetName": "cosmos",
+                    "virtualNetworkName": "fl-vnettest-vn"
+                },
+                "outputs": {
+                    "__inputs": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "v1:VUwCs4PZX6vQ8MTo:Cue2Q8nxqg5rCutkkmb3kLqkj89sTULgtPo1YQCQj/77yaHdrSg6HUAoyDdFnjFCfNMK90weHm5zkbCeR01HhMzHDXEU6R/33U9I0qZjqUfxBxrooTh52LWug6yzQ04H/cBW8c9TPaZ8ut8MLiuTFjTS68KI31KB7UlRGamCewMDLnz51md72vHGY488"
+                    },
+                    "addressPrefix": "10.0.6.0/24",
+                    "delegations": [],
+                    "etag": "W/\"9ed4674e-a52a-4bd8-9b02-179075234386\"",
+                    "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/virtualNetworks/fl-vnettest-vn/subnets/cosmos",
+                    "name": "cosmos",
+                    "privateEndpointNetworkPolicies": "Enabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled",
+                    "provisioningState": "Succeeded"
+                },
+                "parent": "urn:pulumi:dev::VNetTests::pulumi:pulumi:Stack::VNetTests-dev",
+                "dependencies": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                ],
+                "provider": "urn:pulumi:dev::VNetTests::pulumi:providers:azure-nextgen::default_0_6_0::9da71cfa-aee5-4622-8abb-b0f0c010b297",
+                "propertyDependencies": {
+                    "addressPrefix": null,
+                    "resourceGroupName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                    ],
+                    "subnetName": null,
+                    "virtualNetworkName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:VirtualNetwork::fl-vnettest-vn"
+                    ]
+                },
+                "aliases": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150501preview:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150615:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160330:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160601:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160901:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20161201:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170301:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170601:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170801:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170901:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171001:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171101:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180101:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180201:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180401:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180601:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180701:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180801:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181001:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181101:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181201:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190201:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190401:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190601:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190701:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190801:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190901:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191101:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191201:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200301:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200401:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200501:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200601:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200701:Subnet::cosmos",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200801:Subnet::cosmos"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:Subnet::backend-functions",
+                "custom": true,
+                "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/virtualNetworks/fl-vnettest-vn/subnets/backend-functions",
+                "type": "azure-nextgen:network/latest:Subnet",
+                "inputs": {
+                    "addressPrefix": "10.0.3.0/24",
+                    "resourceGroupName": "fl-vnettest",
+                    "subnetName": "backend-functions",
+                    "virtualNetworkName": "fl-vnettest-vn"
+                },
+                "outputs": {
+                    "__inputs": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "v1:7QtId5hIfg+Aelbk:OGE1GEfaLi+j7iW2Drcjf7eyz74dxF24OleZb5gzk6fKTErxDArWvTLT+3m8HcDwZfhk2zsiwvRodKhotvHEJSOj+IbtUj3D/6gwqe9lfuHeBn+dhnUnZVNluF1PWMBAaPwUYRJVksOhEd1/rMHybzfN0iM6Z/X63SSzKhICLvUAJYnGnpHZl/pGQqZCHFvKh6OJEv7U3wg="
+                    },
+                    "addressPrefix": "10.0.3.0/24",
+                    "delegations": [],
+                    "etag": "W/\"9ed4674e-a52a-4bd8-9b02-179075234386\"",
+                    "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/virtualNetworks/fl-vnettest-vn/subnets/backend-functions",
+                    "name": "backend-functions",
+                    "privateEndpointNetworkPolicies": "Enabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled",
+                    "provisioningState": "Succeeded"
+                },
+                "parent": "urn:pulumi:dev::VNetTests::pulumi:pulumi:Stack::VNetTests-dev",
+                "dependencies": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                ],
+                "provider": "urn:pulumi:dev::VNetTests::pulumi:providers:azure-nextgen::default_0_6_0::9da71cfa-aee5-4622-8abb-b0f0c010b297",
+                "propertyDependencies": {
+                    "addressPrefix": null,
+                    "resourceGroupName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                    ],
+                    "subnetName": null,
+                    "virtualNetworkName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:VirtualNetwork::fl-vnettest-vn"
+                    ]
+                },
+                "aliases": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150501preview:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150615:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160330:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160601:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160901:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20161201:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170301:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170601:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170801:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170901:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171001:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171101:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180101:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180201:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180401:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180601:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180701:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180801:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181001:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181101:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181201:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190201:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190401:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190601:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190701:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190801:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190901:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191101:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191201:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200301:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200401:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200501:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200601:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200701:Subnet::backend-functions",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200801:Subnet::backend-functions"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:Subnet::azure-sql",
+                "custom": true,
+                "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/virtualNetworks/fl-vnettest-vn/subnets/azure-sql",
+                "type": "azure-nextgen:network/latest:Subnet",
+                "inputs": {
+                    "addressPrefix": "10.0.4.0/24",
+                    "resourceGroupName": "fl-vnettest",
+                    "subnetName": "azure-sql",
+                    "virtualNetworkName": "fl-vnettest-vn"
+                },
+                "outputs": {
+                    "__inputs": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "v1:LDL+WLpCjXGzxW7s:Fbqvw9rNIkgy7UU/IZwRTpC0MWWdi/NQFIn+FD0v7uHyqPM9YwSMnrQjAh2bBT5QVzgG0L0ALCJf3uzeS+TreefZswriMahf/iDullKOvE/6+dA4sUVz9fT146EyFlHjqdZMKSSRl2S1ZSF3Mbbp9t9wP96+OV+BUEVWkyVAo/mI8P7FTX6DH+ehJ62LZbpX"
+                    },
+                    "addressPrefix": "10.0.4.0/24",
+                    "delegations": [],
+                    "etag": "W/\"9ed4674e-a52a-4bd8-9b02-179075234386\"",
+                    "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/virtualNetworks/fl-vnettest-vn/subnets/azure-sql",
+                    "name": "azure-sql",
+                    "privateEndpointNetworkPolicies": "Enabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled",
+                    "provisioningState": "Succeeded"
+                },
+                "parent": "urn:pulumi:dev::VNetTests::pulumi:pulumi:Stack::VNetTests-dev",
+                "dependencies": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                ],
+                "provider": "urn:pulumi:dev::VNetTests::pulumi:providers:azure-nextgen::default_0_6_0::9da71cfa-aee5-4622-8abb-b0f0c010b297",
+                "propertyDependencies": {
+                    "addressPrefix": null,
+                    "resourceGroupName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                    ],
+                    "subnetName": null,
+                    "virtualNetworkName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:VirtualNetwork::fl-vnettest-vn"
+                    ]
+                },
+                "aliases": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150501preview:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150615:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160330:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160601:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160901:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20161201:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170301:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170601:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170801:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170901:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171001:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171101:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180101:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180201:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180401:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180601:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180701:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180801:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181001:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181101:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181201:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190201:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190401:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190601:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190701:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190801:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190901:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191101:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191201:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200301:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200401:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200501:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200601:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200701:Subnet::azure-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200801:Subnet::azure-sql"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:Subnet::front-end",
+                "custom": true,
+                "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/virtualNetworks/fl-vnettest-vn/subnets/front-end",
+                "type": "azure-nextgen:network/latest:Subnet",
+                "inputs": {
+                    "addressPrefix": "10.0.1.0/24",
+                    "resourceGroupName": "fl-vnettest",
+                    "subnetName": "front-end",
+                    "virtualNetworkName": "fl-vnettest-vn"
+                },
+                "outputs": {
+                    "__inputs": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "v1:CUEvLxzqKWtInXFD:SnmkxgpBYiT8iAJobwUsI745EpUX8sr3mw+N6RWAYIPuXYzt7TF9WljygXQ57CufUnumPRaUoc6e2Gq15HzwKcydhAbTH4C8e0lWvaU380QJCV+9kg/5Om/JMZ/3DFXu2dbWUbn8X56DBkJXLce5GjMYJUyumTGty+Fyi30Dh3YIxJzN/gpoaELKBvMCFkHP"
+                    },
+                    "addressPrefix": "10.0.1.0/24",
+                    "delegations": [],
+                    "etag": "W/\"8096b3cf-26b1-4b14-8753-ba4834fbd4ed\"",
+                    "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/virtualNetworks/fl-vnettest-vn/subnets/front-end",
+                    "name": "front-end",
+                    "privateEndpointNetworkPolicies": "Enabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled",
+                    "provisioningState": "Succeeded"
+                },
+                "parent": "urn:pulumi:dev::VNetTests::pulumi:pulumi:Stack::VNetTests-dev",
+                "dependencies": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                ],
+                "provider": "urn:pulumi:dev::VNetTests::pulumi:providers:azure-nextgen::default_0_6_0::9da71cfa-aee5-4622-8abb-b0f0c010b297",
+                "propertyDependencies": {
+                    "addressPrefix": null,
+                    "resourceGroupName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                    ],
+                    "subnetName": null,
+                    "virtualNetworkName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:VirtualNetwork::fl-vnettest-vn"
+                    ]
+                },
+                "aliases": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150501preview:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150615:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160330:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160601:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160901:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20161201:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170301:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170601:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170801:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170901:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171001:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171101:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180101:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180201:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180401:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180601:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180701:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180801:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181001:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181101:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181201:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190201:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190401:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190601:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190701:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190801:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190901:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191101:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191201:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200301:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200401:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200501:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200601:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200701:Subnet::front-end",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200801:Subnet::front-end"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::VNetTests::azure-nextgen:sql/v20200801preview:Database::fl-vnettest-db",
+                "custom": true,
+                "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Sql/servers/fl-vnettest-ss/databases/fl-vnettest-db",
+                "type": "azure-nextgen:sql/v20200801preview:Database",
+                "inputs": {
+                    "databaseName": "fl-vnettest-db",
+                    "location": "northeurope",
+                    "resourceGroupName": "fl-vnettest",
+                    "serverName": "fl-vnettest-ss",
+                    "tags": {
+                        "Environment": "Experiment",
+                        "Scale": "Normal"
+                    }
+                },
+                "outputs": {
+                    "__inputs": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "v1:sBsGVPPxcY0lRFYS:pdWZcjcNj74XlIOjFYv+k1KoHh2AGM/j4ev5//kCOeG2V44wylwwcnEhxxqw6W9W7DZwDNJldxoaYIbf/HdQKTPbECLjLzn6exffbYbHfyij42O5A3mdEKBh7OyXiQiRhSOJaMpIo4GZUNf7zjuq2SYYAzUdrDavP9PD7JQNSpFeAo74S1Mr02UnVCo+a2V6AmfL0RePXvYkp/ALi0MqLS+0ZKW/kldKxPhG4gz9gjbYXJC/8j5q18/UD1eego8="
+                    },
+                    "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
+                    "collation": "SQL_Latin1_General_CP1_CI_AS",
+                    "creationDate": "2021-02-10T17:26:13.43Z",
+                    "currentServiceObjectiveName": "GP_Gen5_2",
+                    "currentSku": {
+                        "capacity": 2,
+                        "family": "Gen5",
+                        "name": "GP_Gen5",
+                        "tier": "GeneralPurpose"
+                    },
+                    "databaseId": "3d30d691-890a-4743-b679-57f4859e15c7",
+                    "defaultSecondaryLocation": "westeurope",
+                    "earliestRestoreDate": "2021-02-10T17:56:13.43Z",
+                    "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Sql/servers/fl-vnettest-ss/databases/fl-vnettest-db",
+                    "kind": "v12.0,user,vcore",
+                    "licenseType": "LicenseIncluded",
+                    "location": "northeurope",
+                    "maintenanceConfigurationId": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default",
+                    "maxLogSizeBytes": 68719476736,
+                    "maxSizeBytes": 34359738368,
+                    "name": "fl-vnettest-db",
+                    "readScale": "Disabled",
+                    "requestedServiceObjectiveName": "GP_Gen5_2",
+                    "sku": {
+                        "capacity": 2,
+                        "family": "Gen5",
+                        "name": "GP_Gen5",
+                        "tier": "GeneralPurpose"
+                    },
+                    "status": "Online",
+                    "storageAccountType": "GRS",
+                    "tags": {
+                        "Environment": "Experiment",
+                        "Scale": "Normal"
+                    },
+                    "type": "Microsoft.Sql/servers/databases",
+                    "zoneRedundant": false
+                },
+                "parent": "urn:pulumi:dev::VNetTests::pulumi:pulumi:Stack::VNetTests-dev",
+                "dependencies": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:sql/v20200801preview:Server::fl-vnettest-ss"
+                ],
+                "provider": "urn:pulumi:dev::VNetTests::pulumi:providers:azure-nextgen::default_0_6_0::9da71cfa-aee5-4622-8abb-b0f0c010b297",
+                "propertyDependencies": {
+                    "databaseName": null,
+                    "location": null,
+                    "resourceGroupName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                    ],
+                    "serverName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:sql/v20200801preview:Server::fl-vnettest-ss"
+                    ],
+                    "tags": null
+                },
+                "aliases": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:sql/latest:Database::fl-vnettest-db",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:sql/v20140401:Database::fl-vnettest-db",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:sql/v20170301preview:Database::fl-vnettest-db",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:sql/v20171001preview:Database::fl-vnettest-db",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:sql/v20190601preview:Database::fl-vnettest-db",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:sql/v20200202preview:Database::fl-vnettest-db"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:Subnet::managed-sql",
+                "custom": true,
+                "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/virtualNetworks/fl-vnettest-vn/subnets/managed-sql",
+                "type": "azure-nextgen:network/latest:Subnet",
+                "inputs": {
+                    "addressPrefix": "10.0.5.0/24",
+                    "delegations": [
+                        {
+                            "name": "managed-sql-del",
+                            "serviceName": "Microsoft.Sql/managedInstances"
+                        }
+                    ],
+                    "networkSecurityGroup": {
+                        "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/networkSecurityGroups/managed-sql-nsg"
+                    },
+                    "resourceGroupName": "fl-vnettest",
+                    "routeTable": {
+                        "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/routeTables/managed-sql-rt"
+                    },
+                    "subnetName": "managed-sql",
+                    "virtualNetworkName": "fl-vnettest-vn"
+                },
+                "outputs": {
+                    "__inputs": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "v1:FF8YUNO0g9BVfJiN:h+AbDabTl6zKfi0AJNFRN/Ndnhv94qbFtDpYR3PKmZtgl1G5rrK8zoxeovpjpkWpc2h7M+SDhG4aYK6jz2VLOB0gujZ9veJUkfgqPzHcE1c2ss7UAvmFhWJJntm2gxId3dUdHiKtVxE5+Y9gyB0wDnlPJy0Zc0M1Y9brkIlEmKFmUc9nYQnaF7nf/6s8Fzk6laxNTaalO+TUWXEW++XM/XqZrpcWRgap3i1eE1RNH2t/R1W3KwBRvTzc0jrxcz8WmvzFhx9x1URKofx94LjgqWPwXaPhYLtkmbmodV2kU3pVTyR1TGeekzkermCC3hYUHJfq5S5C94BgPDVo7ejN0axmVGzIMy/4y7DupYC968mU5ejIGzHavmqtpH45JpcGwNIKeQuh1R5mWTj4MdJIjucJO6cE7ouQjSC6JNu9UtDnIi9T0lseXztc8neKUo9jZzI7lTuUiaK1Dtxq2kS/I3PnKX584Bcawt1OOKeIQD5I/WnAtmui9UCAQqTKxEzI/YrQm0+tU74dnVqUITbBryBGXbYGUN1Q2gLc8t8Bhjpxvkz+v8tbb2V/XOwQ3J2c6uzdA+71eBjlaqgh9AnwzoeO2wLCelC5CxRzjDGsbPEDwVeHVwhUEhOSBWol5WiMDRtqqW80fmm//UEYLnrrSzUNaw5QNI5FLgqQg3bgT5TwFz8PbIHg+DewqXoJ5A8KhlZQHc0MsxE/zGLJ0SjDbFzUn3Y2fHc6wrnU43VMuTQaKVpSkdTN1nc="
+                    },
+                    "addressPrefix": "10.0.5.0/24",
+                    "delegations": [
+                        {
+                            "actions": [
+                                "Microsoft.Network/virtualNetworks/subnets/join/action",
+                                "Microsoft.Network/virtualNetworks/subnets/prepareNetworkPolicies/action",
+                                "Microsoft.Network/virtualNetworks/subnets/unprepareNetworkPolicies/action"
+                            ],
+                            "etag": "W/\"580d107a-0b9c-4f9a-adc6-1bd76f74876d\"",
+                            "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/virtualNetworks/fl-vnettest-vn/subnets/managed-sql/delegations/managed-sql-del",
+                            "name": "managed-sql-del",
+                            "provisioningState": "Succeeded",
+                            "serviceName": "Microsoft.Sql/managedInstances"
+                        }
+                    ],
+                    "etag": "W/\"580d107a-0b9c-4f9a-adc6-1bd76f74876d\"",
+                    "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/virtualNetworks/fl-vnettest-vn/subnets/managed-sql",
+                    "name": "managed-sql",
+                    "networkSecurityGroup": {
+                        "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/networkSecurityGroups/managed-sql-nsg"
+                    },
+                    "privateEndpointNetworkPolicies": "Enabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled",
+                    "provisioningState": "Succeeded",
+                    "routeTable": {
+                        "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/routeTables/managed-sql-rt"
+                    }
+                },
+                "parent": "urn:pulumi:dev::VNetTests::pulumi:pulumi:Stack::VNetTests-dev",
+                "dependencies": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:NetworkSecurityGroup::managed-sql-nsg",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:RouteTable::managed-sql-rt",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:VirtualNetwork::fl-vnettest-vn",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                ],
+                "provider": "urn:pulumi:dev::VNetTests::pulumi:providers:azure-nextgen::default_0_6_0::9da71cfa-aee5-4622-8abb-b0f0c010b297",
+                "propertyDependencies": {
+                    "addressPrefix": null,
+                    "delegations": null,
+                    "networkSecurityGroup": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:NetworkSecurityGroup::managed-sql-nsg"
+                    ],
+                    "resourceGroupName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:resources/latest:ResourceGroup::fl-vnettest"
+                    ],
+                    "routeTable": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:RouteTable::managed-sql-rt"
+                    ],
+                    "subnetName": null,
+                    "virtualNetworkName": [
+                        "urn:pulumi:dev::VNetTests::azure-nextgen:network/latest:VirtualNetwork::fl-vnettest-vn"
+                    ]
+                },
+                "aliases": [
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150501preview:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20150615:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160330:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160601:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20160901:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20161201:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170301:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170601:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170801:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20170901:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171001:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20171101:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180101:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180201:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180401:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180601:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180701:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20180801:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181001:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181101:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20181201:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190201:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190401:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190601:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190701:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190801:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20190901:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191101:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20191201:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200301:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200401:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200501:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200601:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200701:Subnet::managed-sql",
+                    "urn:pulumi:dev::VNetTests::azure-nextgen:network/v20200801:Subnet::managed-sql"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::VNetTests::azure-nextgen:sql/v20200801preview:ManagedInstance::fl-vnettest-sm",
+                "custom": true,
+                "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Sql/managedInstances/fl-vnettest-sm",
+                "type": "azure-nextgen:sql/v20200801preview:ManagedInstance",
+                "inputs": {
+                    "administratorLogin": "fltest",
+                    "collation": "SQL_Latin1_General_CP1_CI_AS",
+                    "licenseType": "LicenseIncluded",
+                    "location": "northeurope",
+                    "maintenanceConfigurationId": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default",
+                    "managedInstanceName": "fl-vnettest-sm",
+                    "publicDataEndpointEnabled": false,
+                    "resourceGroupName": "fl-vnettest",
+                    "sku": {
+                        "capacity": 4,
+                        "family": "Gen5",
+                        "name": "GP_Gen5",
+                        "tier": "GeneralPurpose"
+                    },
+                    "storageAccountType": "LRS",
+                    "storageSizeInGB": 32,
+                    "subnetId": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/virtualNetworks/fl-vnettest-vn/subnets/managed-sql",
+                    "tags": {
+                        "Environment": "Experiment",
+                        "Scale": "Normal"
+                    },
+                    "timezoneId": "UTC",
+                    "vCores": 4,
+                    "zoneRedundant": false
+                },
+                "outputs": {
+                    "__inputs": {
+                        "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                        "ciphertext": "v1:4cHQ/2b8zc338SPw:68wKjOYEt1BOneGKRCv5vJ/IcuzIEZ6PUhScjQ8vXnIWSERHr55eimLVD7dPLJWqJmZ6EKgttgp7fWG7rE/pDg4olxXaPVSDnqEHICOIrIU+O8h0wgmiOd3x+EpjyYhCfvZ0YkAUbm5lrMN58sNnnCMVhmUzMC/oQd2F5DYuQxM40XG82rMS3vhUeNmZq/IEKW31QS3WxyE67ovl5mobTmuygyuiTPP04JrvUYgUvBTCf7Wo+rKUmOEHKooDiztH0RW9L8MbsBH6aBX/yw0y7sYl1Ffp06Bid7A3v3mo3JeLLPWp1Vx/AT+VSBfatwok3s/PN4DRKN3bI/RZWyu9IIEK21/lkip2vpFCYzWAJN+DcyCsbhzlZdsLUkDZ7FWK3sdhxVM7l2o4XnWsGlwmoHmdvodPBeiIDSdTNrvTAew/+k6hqPFnXNzdaG0XpmfKRVGHKtuoeR961PtJkESd4jmJgBh3a1q8AOc0RQFgzhJT1tvCUBOSYC35pbzgneeJ2eHrcoJXWACqSCy3xpVIsnaL2QwP9T5c0UCzvy4ggj9Ictbn8RSVwBO7v3UEq2+ORWHg7P9PiGsg8W1uavRa+XTaJNxYBjy4uTZZBLZUziOQ6topFVk4u1T1Q5a2VoYrIddO95LLjn+mx93gCyHR5Ki2DYZEkFn3Q0AxhHj4Jk6pTnIcrIwUxzmnRi+Ltp4fraiWU3bbe9JVC7W2bVwO/Acbk4hTcCLEF7IvmT9Z5JRn6ICcSKmCZI9NuOCxLbAplTa64ZtERwBQZcQMNiTW5fUqAQUX0/lzAsgp/EAdL4+ICiaY++d2B1jjb5RwssFczXwmxPEgxVjiJTTJy9zKA0UOrUQiE6rHhaD9hjacp7QjcEvXFFKZ51422TwzjJ2JOYinC15Zal3OX1RKAPrPTZnYAAUBUVCavvLmXcdKekE/t6+8bafjrFNGtyDnjeY7sfGPbD1TZCc9CmBT5lMfo1d3lyJYKBDFGs9XyU4qSBlxyQdbWAW6oo9Q1nNfmLRJtSzYaOM/iFfdDvrLWaGQPW7JrxMdA7AYlNm0FDWUgMSZwGsC89s9uJNFw2XTAYw="
+                    },
+                    "administratorLogin": "fltest",
+                    "collation": "SQL_Latin1_General_CP1_CI_AS",
+                    "dnsZone": "7fce667cace4",
+                    "fullyQualifiedDomainName": "fl-vnettest-sm.7fce667cace4.database.windows.net",
+                    "id": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Sql/managedInstances/fl-vnettest-sm",
+                    "licenseType": "LicenseIncluded",
+                    "location": "northeurope",
+                    "maintenanceConfigurationId": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default",
+                    "name": "fl-vnettest-sm",
+                    "privateEndpointConnections": [],
+                    "provisioningState": "Succeeded",
+                    "publicDataEndpointEnabled": false,
+                    "sku": {
+                        "capacity": 4,
+                        "family": "Gen5",
+                        "name": "GP_Gen5",
+                        "tier": "GeneralPurpose"
+                    },
+                    "state": "Ready",
+                    "storageAccountType": "LRS",
+                    "storageSizeInGB": 32,
+                    "subnetId": "/subscriptions/33b84d52-5ab7-4975-80b4-35f034fcc35d/resourceGroups/fl-vnettest/providers/Microsoft.Network/virtualNetworks/fl-vnettest-vn/subnets/managed-sql",
+                    "tags": {
+                        "Environment": "Experiment",
+                        "Scale": "Normal"
+                    },
+                    "timezoneId": "UTC",
+                    "type": "Microsoft.Sql/managedInstances",
+                    "vCores": 4,
+                    "zoneRedundant": false
+                },
+                "parent": "urn:pulumi:dev::VNetTests::pulumi:pulumi:Stack::VNetTests-dev",
+                "protect": false,
+                "provider": "urn:pulumi:dev::VNetTests::pulumi:providers:azure-nextgen::default_0_6_0::9da71cfa-aee5-4622-8abb-b0f0c010b297"
+            }
+        ]
+    }
+}
