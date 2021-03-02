@@ -288,6 +288,11 @@ const appService = new azure.web.latest.WebApp("fl-vnettest-wa",
         tags,
         siteConfig: {
             appSettings: [
+                // This is critical to make DNS lookups return the internal IP Address. 
+                // Without it, your web app will get the public IP address of the SQL Server and will be denied access. 
+                // 168.63.129.16 is a magic constant provided by Microsoft and works with the setup above. 
+                // You will only need something different if you use your own DNS servers.
+                // See https://feedback.azure.com/forums/169385-web-apps/suggestions/38383642-web-app-and-private-dns-zone-support
                 { name: "WEBSITE_DNS_SERVER", value: "168.63.129.16" },
                 { name: "WEBSITE_VNET_ROUTE_ALL", value: "1" },
                 { name: "hostname", value: passSqlServer.name.apply(n => n + ".database.windows.net") },
@@ -303,6 +308,7 @@ const appService = new azure.web.latest.WebApp("fl-vnettest-wa",
     
 
 // Give the web app access to the vnet
+// Note that "Swift" is the "modern" way of doing this. Don't do what I do and spend ours trying to make WebAppVnetConnection work - it won't.
 const webAppVNetConnection = new azure.web.latest.WebAppSwiftVirtualNetworkConnection("fl-vnettest-wa-vc", {
     name: appService.name,
     resourceGroupName: resourceGroup.name,
