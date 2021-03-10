@@ -18,7 +18,7 @@ At the moment it can:
 
 # Usage
 The homepage shows a list of tests and which configuration option you need to set to test it.  
-You'll need to restart the website between config change. This is a pain, but allowing you to just enter connection strings etc into an input box was too much for security mentality to cope with.
+You'll need to restart the website between config change. This is a pain, but allowing you to just enter connection strings etc into an input box was too much for my security mentality to cope with.
 
 # Test environment
 See the `Infrastructure` folder for a [Pulumi](https://www.pulumi.com/docs/reference/pkg/azure-nextgen/) script if you want to set up a test environment with some interesting challenges. This also doubles as guidance on how to configure all this using Pulumi as some of this is lightly documented elsewhere and I have spent many hours with trial and error to make it work.

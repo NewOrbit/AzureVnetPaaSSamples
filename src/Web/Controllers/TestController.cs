@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
+using System.Net.Http;
 
 namespace ConnectivityTester.Controllers
 {
@@ -75,6 +76,21 @@ namespace ConnectivityTester.Controllers
                 return this.StatusCode(500, e.Message);
             }
 
+        }
+
+        public async Task<IActionResult> WebResult()
+        {
+            try
+            {
+                var webaddress = this.configuration["webaddress"];
+                var httpClient = new HttpClient();
+                var result = await httpClient.GetAsync(webaddress);
+                return this.Ok($"Url: {webaddress}. Response code: {result.StatusCode}");
+            }
+            catch (Exception e)
+            {
+                return this.StatusCode(500, e.Message);
+            }
         }
 
         private string GetSQLConnectionString()
