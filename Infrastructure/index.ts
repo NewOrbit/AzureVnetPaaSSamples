@@ -9,7 +9,7 @@ const tags = {
 
 // NOTE: Never do this!!
 const administratorLogin = "fltest";
-const administratorLoginPassword = "LsKpZpjbqACtrAFUb7*PA7k%S#rStCQmXI548!67";
+const administratorLoginPassword = "not!verySecret"; // Upgrade pulumi and replace with RandomPassword
 
 // Create an Azure Resource Group
 const resourceGroup = new azure.resources.ResourceGroup("fl-vnettest", {
